@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday to me, myself & I</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .birthday-message {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: red;
+        background-color: yellow;
+        animation: bounce 1s infinite alternate; /* Animation properties */
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-20px);
+        }
+      }
+
+      video {
+        width: 300px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="birthday-message">Happy Birthday to me, myself & I</div>
+
+    <audio id="birthdaySong" controls style="margin-bottom: 20px">
+      <source src="./mp3/Happy happy birthday to you.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <video controls>
+      <source src="./mp4/Happy, Happy Birthday To You.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+
+    <script>
+      // Auto-play the birthday song when the page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        const birthdaySong = document.getElementById("birthdaySong");
+        birthdaySong.play();
+      });
+    </script>
+  </body>
+</html>
